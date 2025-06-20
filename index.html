@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Shipment Management Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Shipment Management Form</h2>
+        <form id="empForm" method="post">
+            <div class="form-group">
+                <label for="ShipNo">Shipment Number:</label>
+                <input type="number" class="form-control" id="ShipNo" placeholder="Enter Shipment No" required onchange="existingShipment();" />
+            </div>
+            <div class="form-group">
+                <label for="discription">Description:</label>
+                <input type="text" class="form-control" id="discription" placeholder="Enter Description of your goods" />
+            </div>
+            <div class="form-group">
+                <label for="src">Source:</label>
+                <input type="text" class="form-control" id="src" placeholder="Enter Source of shipment" />
+            </div>
+            <div class="form-group">
+                <label for="dest">Destination:</label>
+                <input type="text" class="form-control" id="dest" placeholder="Enter Destination of shipment" />
+            </div>
+            <div class="form-group">
+                <label for="shipdate">Shipping Date:</label>
+                <input type="date" class="form-control" id="shipdate" />
+            </div>
+            <div class="form-group">
+                <label for="reachdate">Expected Delivery Date:</label>
+                <input type="date" class="form-control" id="reachdate" />
+            </div>
+            <div class="form-group text-center">
+                <input type="button" class="btn btn-lg btn-primary " id="save" value="Save" onclick="saveShipment();" />
+                <input type="button" class="btn btn-lg btn-primary" id="change" value="Update" onclick="updateShipment();" disabled />
+                <input type="button" class="btn btn-lg btn-primary" id="reset" value="Reset" onclick="resetShipment();" />
+            </div>
+        </form>
+    </div>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
